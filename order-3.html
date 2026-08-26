@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweetness — Order Homemade Rakhi Chocolates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon:#5C0E28;
+    --maroon-deep:#3A0817;
+    --gold:#C9A227;
+    --gold-light:#EED9A0;
+    --rose:#D9436B;
+    --cream:#FBF1DE;
+    --cream-2:#F7E6C4;
+    --ink:#2E0A14;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    background-image:
+      radial-gradient(circle at 8% 4%, rgba(201,162,39,0.16), transparent 40%),
+      radial-gradient(circle at 95% 90%, rgba(217,67,107,0.14), transparent 45%);
+    font-family:'Poppins',sans-serif;
+    color:var(--ink);
+    padding:0 0 3rem;
+  }
+  .wrap{max-width:480px;margin:0 auto;padding:0 1.1rem;}
+
+  header.hero{
+    text-align:center;
+    padding:2.2rem 1.4rem 1.6rem;
+    position:relative;
+  }
+  .eyebrow{
+    font-family:'Poppins',sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--rose);
+    font-weight:600;
+  }
+  .brand{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:3.4rem;
+    line-height:1;
+    color:var(--maroon);
+    margin:0.35rem 0 0.1rem;
+  }
+  .brand-sub{
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    font-size:1.5rem;
+    letter-spacing:0.06em;
+    color:var(--maroon-deep);
+    text-transform:uppercase;
+  }
+  .tagline{
+    margin-top:0.5rem;
+    font-size:0.85rem;
+    color:#7a4a58;
+  }
+
+  .thread{
+    height:6px;
+    margin:1.4rem 0;
+    background:repeating-linear-gradient(90deg,var(--gold) 0 10px, var(--rose) 10px 20px, var(--maroon) 20px 30px);
+    border-radius:4px;
+    opacity:0.85;
+  }
+
+  .seal-card{
+    background:var(--maroon);
+    border-radius:20px;
+    padding:1.6rem 1.3rem 1.4rem;
+    text-align:center;
+    position:relative;
+    box-shadow:0 10px 24px rgba(58,8,23,0.28);
+  }
+  .seal-card::before{
+    content:"";
+    position:absolute;
+    top:-14px; left:50%;
+    transform:translateX(-50%);
+    width:60px; height:26px;
+    background:var(--rose);
+    clip-path:polygon(0 0,100% 0,80% 100%,50% 70%,20% 100%);
+  }
+  .seal-label{
+    color:var(--gold-light);
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    font-size:1.05rem;
+    letter-spacing:0.03em;
+    margin-bottom:0.15rem;
+  }
+  .seal-sub{
+    color:#f1d9d9;
+    font-size:0.78rem;
+    margin-bottom:1rem;
+  }
+  .qr-box{
+    background:var(--cream);
+    display:inline-block;
+    padding:10px;
+    border-radius:14px;
+    border:3px solid var(--gold);
+  }
+  .qr-box img{display:block; width:170px; height:170px;}
+  .seal-hint{
+    color:var(--gold-light);
+    font-size:0.72rem;
+    margin-top:0.7rem;
+    letter-spacing:0.03em;
+  }
+
+  .order-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.5rem;
+    width:100%;
+    margin-top:1.1rem;
+    padding:0.9rem 1rem;
+    background:#25D366;
+    color:#0b2b16;
+    font-weight:600;
+    font-size:0.95rem;
+    border:none;
+    border-radius:12px;
+    text-decoration:none;
+  }
+  .order-btn svg{width:20px;height:20px;flex-shrink:0;}
+
+  section.menu{margin-top:2rem;}
+  .section-title{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1.3rem;
+    color:var(--maroon);
+    margin-bottom:1.1rem;
+  }
+
+  .cat-card{
+    background:#fffaf1;
+    border:1px solid var(--cream-2);
+    border-radius:16px;
+    padding:1.1rem 1.15rem;
+    margin-bottom:1rem;
+    box-shadow:0 3px 10px rgba(58,8,23,0.06);
+  }
+  .cat-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:0.7rem;
+  }
+  .cat-name{
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    font-size:0.98rem;
+    color:var(--maroon-deep);
+  }
+  .cat-price-note{
+    font-size:0.66rem;
+    background:var(--gold-light);
+    color:#5c4a10;
+    padding:0.15rem 0.5rem;
+    border-radius:20px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .item-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    padding:0.4rem 0;
+    border-bottom:1px dashed #eadfc6;
+    font-size:0.86rem;
+  }
+  .item-row:last-of-type{border-bottom:none;}
+  .item-name{color:#4a2430;}
+  .item-price{color:var(--rose); font-weight:600; white-space:nowrap; margin-left:0.6rem;}
+
+  .cat-order{
+    display:block;
+    text-align:center;
+    margin-top:0.85rem;
+    padding:0.6rem;
+    border-radius:10px;
+    border:1.5px solid var(--maroon);
+    color:var(--maroon);
+    font-size:0.82rem;
+    font-weight:600;
+    text-decoration:none;
+  }
+
+  .promise{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    color:#7a4a58;
+    font-size:1.05rem;
+    margin:1.8rem 0;
+    line-height:1.5;
+  }
+
+  footer{
+    text-align:center;
+    margin-top:1.5rem;
+    padding-top:1.2rem;
+    border-top:1px solid var(--cream-2);
+    font-size:0.78rem;
+    color:#7a4a58;
+  }
+  footer .loc{margin-top:0.3rem;}
+  footer .custom{
+    margin-top:0.6rem;
+    font-size:0.7rem;
+    letter-spacing:0.04em;
+    color:var(--rose);
+    font-weight:600;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Gift love, gift chocolates</div>
+    <div class="brand">Sweetness</div>
+    <div class="brand-sub">Raksha Bandhan</div>
+    <p class="tagline">Homemade chocolates, made with love just for you</p>
+  </header>
+
+  <div class="thread"></div>
+
+  <div class="seal-card">
+    <div class="seal-label">Scan to order</div>
+    <div class="seal-sub">Scan with WhatsApp camera to order instantly</div>
+    <div class="qr-box">
+      <img src="whatsapp_qr.png" alt="QR code to add Sweetness on WhatsApp">
+    </div>
+    <div class="seal-hint">Malad East &nbsp;·&nbsp; Custom orders available</div>
+    <a class="order-btn" href="https://wa.me/918355806467?text=Hi!%20I%27d%20like%20to%20order%20homemade%20Rakhi%20chocolates.%20Please%20share%20today%27s%20availability.">
+      <svg viewBox="0 0 24 24" fill="#0b2b16"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.07-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.76 1.24-.45.06-.9.09-1.46-.09-.34-.11-.77-.25-1.33-.49-2.34-1.01-3.87-3.35-3.99-3.5-.12-.16-.95-1.26-.95-2.4 0-1.14.6-1.7.82-1.93.22-.23.48-.29.64-.29.16 0 .32 0 .46.01.15.01.35-.06.55.41.22.53.74 1.81.8 1.94.06.13.1.28.02.45-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.24.25-.11.49.14.24.6 1 1.29 1.62.89.79 1.63 1.04 1.87 1.16.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.31-.2.53-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.16 1.2z"/></svg>
+      Order on WhatsApp
+    </a>
+  </div>
+
+  <section class="menu">
+    <div class="section-title">Delicious handmade chocolates for a perfect celebration</div>
+
+    <div class="cat-card">
+      <div class="cat-head">
+        <div class="cat-name">Single flavor chocolate</div>
+        <div class="cat-price-note">6-piece box</div>
+      </div>
+      <div class="item-row"><span class="item-name">Dark chocolate</span><span class="item-price">Rs 60</span></div>
+      <div class="item-row"><span class="item-name">Milk chocolate</span><span class="item-price">Rs 60</span></div>
+      <div class="item-row"><span class="item-name">White chocolate</span><span class="item-price">Rs 60</span></div>
+      <div class="item-row"><span class="item-name">Crispy chocolate</span><span class="item-price">Rs 60</span></div>
+      <div class="item-row"><span class="item-name">Tuttifuti chocolate</span><span class="item-price">Rs 90</span></div>
+      <div class="item-row"><span class="item-name">Dry fruit chocolate</span><span class="item-price">Rs 120</span></div>
+      <div class="item-row"><span class="item-name">Rastalai chocolate</span><span class="item-price">Rs 150</span></div>
+      <a class="cat-order" href="https://wa.me/918355806467?text=Hi!%20I%27d%20like%20to%20order%20a%20Single%20Flavor%20Chocolate%20box%20(6%20pieces).%20Flavor%3A%20">Order this box</a>
+    </div>
+
+    <div class="cat-card">
+      <div class="cat-head">
+        <div class="cat-name">Double flavor chocolate</div>
+        <div class="cat-price-note">6-piece box</div>
+      </div>
+      <div class="item-row"><span class="item-name">Rose &amp; white chocolate</span><span class="item-price">Rs 120</span></div>
+      <div class="item-row"><span class="item-name">Mango &amp; white chocolate</span><span class="item-price">Rs 120</span></div>
+      <div class="item-row"><span class="item-name">Rose &amp; mango chocolate</span><span class="item-price">Rs 120</span></div>
+      <div class="item-row"><span class="item-name">Dark &amp; white chocolate</span><span class="item-price">Rs 120</span></div>
+      <a class="cat-order" href="https://wa.me/918355806467?text=Hi!%20I%27d%20like%20to%20order%20a%20Double%20Flavor%20Chocolate%20box%20(6%20pieces).%20Flavor%3A%20">Order this box</a>
+    </div>
+
+    <div class="cat-card">
+      <div class="cat-head">
+        <div class="cat-name">Chocolate bars with flavours</div>
+        <div class="cat-price-note">per piece</div>
+      </div>
+      <div class="item-row"><span class="item-name">Single flavor bar</span><span class="item-price">Rs 100</span></div>
+      <div class="item-row"><span class="item-name">Double flavor bar</span><span class="item-price">Rs 100</span></div>
+      <div class="item-row"><span class="item-name">Customize bar (e.g. name)</span><span class="item-price">Rs 150</span></div>
+      <div class="item-row"><span class="item-name">Festival special bar</span><span class="item-price">Rs 150</span></div>
+      <a class="cat-order" href="https://wa.me/918355806467?text=Hi!%20I%27d%20like%20to%20order%20a%20Chocolate%20Bar.%20Type%3A%20">Order a bar</a>
+    </div>
+  </section>
+
+  <p class="promise">Rakhi isn't just a thread — it's a promise of love and care.</p>
+
+  <footer>
+    <div>Call or WhatsApp <strong>+91 83558 06467</strong></div>
+    <div class="loc">Malad East</div>
+    <div class="custom">Custom orders available &middot; Festival packs available</div>
+  </footer>
+
+</div>
+</body>
+</html>
